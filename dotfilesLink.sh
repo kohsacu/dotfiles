@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=(".bashrc" ".vimrc")
+DOTFILES=(".bashrc" ".vimrc" ".screenrc")
 DATETEIME=`date +%Y%m%dT%H%M%S`
 BASEDIR="${HOME}/git/dotfiles"
 

@@ -1,0 +1,56 @@
+# Escape key is C-a, Default is a.
+escape ^Aa
+
+# don't show startup message.
+startup_message off
+
+# 文字コードを指定
+defencoding utf8
+encoding utf8 utf8
+
+# デフォルトスクロールバックバッファの行数
+defscrollback 10000
+
+# 256 color
+# http://robotsrule.us/vim/
+# $ vim ~/.vimrc
+# set t_Co=256
+# 
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E38;5;%dm'
+defbce "on"
+
+# ステータスバー
+# http://yskwkzhr.blogspot.jp/2010/11/screenrc.html
+# 
+# hardstatus string description:
+#
+#  %m         - Two-letter month number
+#  %d         - Two-letter day number
+#  %02c       - time (hh:mm) in 24 hour format
+#  %s         - seconds
+# %{= .g}     - green color on default background
+#  %H         - host name.
+# %{-}        - undo last color change(so now we're back to default color)
+#  %L=        - left padding start here
+#  %-w        - window list up to but not including the current window (-)
+#  %45L>      - truncation/padding marker; place this point about 45% of the
+#               way into the display area (45)
+# %{=u g.}    - default color on green, and underline.
+#  %n         - number of the current window.
+#  %t         - title of current window.
+# %{-}        - undo last color change
+#  %+w        - window list from the next window on (-)
+#  %-17<      - truncation/padding point. place this point zero spaces (0)
+#               from the right margin (-).
+#  %=         - truncation/paddion point.
+# %{= .y}     - yellow on default background.
+# %l - host load average.
+# 
+# hardstatus alwayslastline "%w"
+# hardstatus alwayslastline '%m/%d %02c:%s %{= .g}%H%{-} %L=%-w%45L>%{=u g.}%n %t%{-}%+w %-17<%=%{= .y}(%l)'
+hardstatus alwayslastline '%{= .g}%{-} %L=%-w%45L>%{=u g.}%n %t%{-}%+w %-17<%=%{= .m}(%l)'
+
+# include hostlocal .screenrc
+#source '.screenrc.local'
+
