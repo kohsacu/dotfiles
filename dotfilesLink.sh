@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOTFILES=(".bashrc" ".vimrc" ".screenrc")
+DOTFILES=(".bashrc" ".vimrc" ".screenrc" ".tmux.conf")
 DATETEIME=`date +%Y%m%dT%H%M%S`
 BASEDIR="$(echo ${0%/*})"
 
